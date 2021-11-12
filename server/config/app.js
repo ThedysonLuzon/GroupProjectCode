@@ -14,11 +14,8 @@ mongoose.connect(process.env.URI || DB.URI, {useNewUrlParser: true, useUnifiedTo
 let mongoDB = mongoose.connection;
 
 
-let indexRouter = require('../routes/index');
-let usersRouter = require('../routes/users');
-
-
-
+let index = require('../routes/index');
+let surveys = require('../routes/surveys');
 
 let app = express();
 
@@ -33,12 +30,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
-
-
-
+app.use('/', index);
+app.use('/surveys', surveys);
 
 
 

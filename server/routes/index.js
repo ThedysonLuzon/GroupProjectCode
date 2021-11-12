@@ -9,11 +9,10 @@ let survey = require('../models/surveys');
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index', { 
-    title: 'Express',
+    title: 'Home',
     surveys: ''
    });
 });
-
 
 
 module.exports = router;
