@@ -5,7 +5,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 const surveys = require('../models/surveys');
 
-// define the book model
+// define the survey model
 let survey = require('../models/surveys');
 
 
